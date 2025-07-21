@@ -55,48 +55,48 @@ const Contact = () => {
             </section>
 
             {/* Contact Form and Info Section */}
-            <section className="py-12 px-6">
+            <section className="py-16 px-6 bg-gradient-to-br from-gray-50 to-white">
                 <div className="container mx-auto">
-                    <div className="bg-white rounded-lg shadow-lg overflow-hidden max-w-5xl mx-auto">
+                    <div className="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-6xl mx-auto">
                         <div className="md:flex">
                             {/* Contact Information */}
-                            <div className="bg-gray-600 text-white p-8 md:w-2/5">
-                                <h2 className="text-2xl font-bold mb-6">Get In Touch</h2>
+                            <div className="bg-gradient-to-br from-gray-700 to-gray-900 text-white p-10 md:w-2/5">
+                                <h2 className="text-3xl font-bold mb-8">Get In Touch</h2>
 
                                 <div className="mb-8">
-                                    <h3 className="font-semibold mb-2 text-lg">Office Address</h3>
+                                    <h3 className="text-lg font-semibold mb-1">Office Address</h3>
                                     <p className="text-blue-100">123 Main Street</p>
                                     <p className="text-blue-100">New Delhi</p>
                                 </div>
 
                                 <div className="mb-8">
-                                    <h3 className="font-semibold mb-2 text-lg">Contact Information</h3>
-                                    <p className="text-blue-100">Email: info@propertyease.com</p>
-                                    <p className="text-blue-100">Phone: +91 7206200000</p>
+                                    <h3 className="text-lg font-semibold mb-1">Contact Information</h3>
+                                    <p className="text-blue-100">📧 info@propertyease.com</p>
+                                    <p className="text-blue-100">📞 +91 7206200000</p>
                                 </div>
 
                                 <div>
-                                    <h3 className="font-semibold mb-2 text-lg">Working Hours</h3>
-                                    <p className="text-blue-100">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                    <h3 className="text-lg font-semibold mb-1">Working Hours</h3>
+                                    <p className="text-blue-100">Mon - Fri: 9:00 AM - 6:00 PM</p>
                                     <p className="text-blue-100">Saturday: 10:00 AM - 4:00 PM</p>
                                     <p className="text-blue-100">Sunday: Closed</p>
                                 </div>
                             </div>
 
                             {/* Contact Form */}
-                            <div className="p-8 md:w-3/5">
-                                <h2 className="text-2xl font-bold mb-6 text-gray-800">Send Us a Message</h2>
+                            <div className="p-10 md:w-3/5">
+                                <h2 className="text-3xl font-bold mb-6 text-gray-800">Send Us a Message</h2>
 
                                 {isSubmitted && (
-                                    <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
-                                        Thank you! Your message has been sent successfully.
+                                    <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
+                                        ✅ Thank you! Your message has been sent successfully.
                                     </div>
                                 )}
 
                                 <form onSubmit={handleSubmit}>
-                                    <div className="mb-4 md:flex md:space-x-4">
-                                        <div className="md:w-1/2 mb-4 md:mb-0">
-                                            <label htmlFor="name" className="block text-gray-700 text-sm font-medium mb-2">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                        <div>
+                                            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                                                 Full Name *
                                             </label>
                                             <input
@@ -106,13 +106,12 @@ const Contact = () => {
                                                 required
                                                 value={formData.name}
                                                 onChange={handleChange}
-                                                className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
                                                 placeholder="Vaishnavi Dhanai"
+                                                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                             />
                                         </div>
-
-                                        <div className="md:w-1/2">
-                                            <label htmlFor="email" className="block text-gray-700 text-sm font-medium mb-2">
+                                        <div>
+                                            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                                                 Email Address *
                                             </label>
                                             <input
@@ -122,14 +121,14 @@ const Contact = () => {
                                                 required
                                                 value={formData.email}
                                                 onChange={handleChange}
-                                                className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
                                                 placeholder="vaishnavi@gmail.com"
+                                                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                             />
                                         </div>
                                     </div>
 
-                                    <div className="mb-4">
-                                        <label htmlFor="phone" className="block text-gray-700 text-sm font-medium mb-2">
+                                    <div className="mb-6">
+                                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                                             Phone Number
                                         </label>
                                         <input
@@ -138,13 +137,13 @@ const Contact = () => {
                                             name="phone"
                                             value={formData.phone}
                                             onChange={handleChange}
-                                            className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
                                             placeholder="7206200000"
+                                            className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                         />
                                     </div>
 
-                                    <div className="mb-4">
-                                        <label htmlFor="subject" className="block text-gray-700 text-sm font-medium mb-2">
+                                    <div className="mb-6">
+                                        <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
                                             Subject *
                                         </label>
                                         <input
@@ -154,13 +153,13 @@ const Contact = () => {
                                             required
                                             value={formData.subject}
                                             onChange={handleChange}
-                                            className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
                                             placeholder="Property Inquiry"
+                                            className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                         />
                                     </div>
 
-                                    <div className="mb-6">
-                                        <label htmlFor="message" className="block text-gray-700 text-sm font-medium mb-2">
+                                    <div className="mb-8">
+                                        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                                             Message *
                                         </label>
                                         <textarea
@@ -169,16 +168,19 @@ const Contact = () => {
                                             required
                                             value={formData.message}
                                             onChange={handleChange}
-                                            rows="5"
-                                            className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
+                                            rows="6"
                                             placeholder="Your message here..."
+                                            className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
                                         ></textarea>
                                     </div>
 
                                     <div>
-                                        <Button variant="primary" className="w-full py-3">
+                                        <button
+                                            type="submit"
+                                            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-all duration-300"
+                                        >
                                             Send Message
-                                        </Button>
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -187,6 +189,7 @@ const Contact = () => {
                 </div>
             </section>
 
+
             {/* Map Section */}
             <section className="pb-12 px-6">
                 <div className="container mx-auto">
@@ -194,14 +197,13 @@ const Contact = () => {
                         {/* In a real application, you would use Google Maps or another map API here */}
                         <iframe
                             title="Google Map"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.935086361554!2d-74.00594128459346!3d40.71277597933052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a3161fdfdf3%3A0xc80b8f06e177fe62!2s123%20Main%20St%2C%20New%20York%2C%20NY%2010001%2C%20USA!5e0!3m2!1sen!2sus!4v1614642339561!5m2!1sen!2sus"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.32835516133!2d77.20898509999999!3d28.5273522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1753022044086!5m2!1sen!2sin"
                             width="100%"
                             height="100%"
                             allowFullScreen=""
                             loading="lazy"
                             className="border-0 w-full h-full"
                         ></iframe>
-
                     </div>
                 </div>
             </section>

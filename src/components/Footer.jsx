@@ -35,23 +35,19 @@ const Footer = () => {
           <div className="w-full md:w-1/4">
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="bg-blue-500 p-2 rounded-full hover:bg-blue-600">
-                <span className="sr-only">Twitter</span>
-                <div className="w-5 h-5"></div>
-              </a>
-              <a href="#" className="bg-red-500 p-2 rounded-full hover:bg-red-600">
-                <span className="sr-only">YouTube</span>
-                <div className="w-5 h-5"></div>
-              </a>
-              <a href="#" className="bg-green-500 p-2 rounded-full hover:bg-green-600">
-                <span className="sr-only">Instagram</span>
-                <div className="w-5 h-5"></div>
-              </a>
-              <a href="#" className="bg-yellow-500 p-2 rounded-full hover:bg-yellow-600">
-                <span className="sr-only">Facebook</span>
-                <div className="w-5 h-5"></div>
-              </a>
-            </div>
+                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm">f</span>
+                </div>
+                <div className="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm">t</span>
+                </div>
+                <div className="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm">in</span>
+                </div>
+                <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm">@</span>
+                </div>
+              </div>
           </div>
         </div>
         
